@@ -1,8 +1,9 @@
+import Header from "@/components/shared/Header/Header"
 
 const Company = () => {
   return (
     <div>
-      Company
+      <Header title={'Company Listings'} placeholder={'Search Company Listings'}/>
     </div>
   )
 }

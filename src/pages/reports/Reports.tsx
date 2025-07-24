@@ -1,9 +1,10 @@
+import Header from "@/components/shared/Header/Header"
 
 
 const Reports = () => {
   return (
     <div>
-      Reports
+      <Header title="All Reports" placeholder="Search Items" filter={true} report={true}/>
     </div>
   )
 }

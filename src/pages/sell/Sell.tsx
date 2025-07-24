@@ -1,8 +1,9 @@
+import Header from "@/components/shared/Header/Header"
 
 const Sell = () => {
   return (
     <div>
-      Sell
+      <Header title="Sell Item" placeholder="Search Items" filter={true}/>
     </div>
   )
 }

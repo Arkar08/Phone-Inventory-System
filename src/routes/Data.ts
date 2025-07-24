@@ -1,6 +1,7 @@
 import MainLayout from "@/layout/MainLayout";
 import Login from "@/pages/auth/Login";
 import Logout from "@/pages/auth/Logout";
+import Category from "@/pages/category/Category";
 import Company from "@/pages/company/Company";
 import Dashboard from "@/pages/dashboard/Dashboard";
 import NotFound from "@/pages/notFound/NotFound";
@@ -26,6 +27,10 @@ const Data = [
             {
                 path:"company",
                 Component:Company
+            },
+            {
+                path:"category",
+                Component:Category
             },
             {
                 path:"purchase",

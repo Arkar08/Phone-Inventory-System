@@ -1,9 +1,10 @@
+import Header from "@/components/shared/Header/Header"
 
 
 const Purchase = () => {
   return (
     <div>
-      Purchase
+      <Header title="Purchase Item" placeholder="Search Items" filter={true}/>
     </div>
   )
 }

@@ -8,6 +8,10 @@ export const menuItems = [
         route:"/company"
     },
     {
+        title:"Category",
+        route:'/category'
+    },
+    {
         title:"Purchase Item",
         route:"/purchase"
     },
