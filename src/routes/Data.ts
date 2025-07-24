@@ -5,7 +5,9 @@ import Company from "@/pages/company/Company";
 import Dashboard from "@/pages/dashboard/Dashboard";
 import NotFound from "@/pages/notFound/NotFound";
 import Purchase from "@/pages/purchase/Purchase";
+import PurchaseReport from "@/pages/reports/purchaseReport/PurchaseReport";
 import Reports from "@/pages/reports/Reports";
+import SellReport from "@/pages/reports/sellReport/SellReport";
 import Sell from "@/pages/sell/Sell";
 
 const Data = [
@@ -35,7 +37,15 @@ const Data = [
             },
             {
                 path:"reports",
-                Component:Reports
+                Component:Reports,
+            },
+            {
+                path:"reports/sell",
+                Component:SellReport
+            },
+            {
+                path:'reports/purchase',
+                Component:PurchaseReport
             },
             {
                 path:'logout',

@@ -1,6 +1,6 @@
 
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import Data from './data'
+import Data from './Data'
 
 const router = createBrowserRouter(Data)
 
