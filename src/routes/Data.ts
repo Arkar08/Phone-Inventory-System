@@ -4,6 +4,7 @@ import Logout from "@/pages/auth/Logout";
 import Category from "@/pages/category/Category";
 import Company from "@/pages/company/Company";
 import Dashboard from "@/pages/dashboard/Dashboard";
+import Items from "@/pages/Items/Items";
 import NotFound from "@/pages/notFound/NotFound";
 import Purchase from "@/pages/purchase/Purchase";
 import PurchaseReport from "@/pages/reports/purchaseReport/PurchaseReport";
@@ -31,6 +32,10 @@ const Data = [
             {
                 path:"category",
                 Component:Category
+            },
+            {
+                path:"items",
+                Component:Items
             },
             {
                 path:"purchase",
