@@ -1,13 +1,14 @@
+
+import { TableBody, TableCell, TableRow } from "@/components/ui/table";
+import type { Company, CompanyProps } from "@/utils/constant";
 import { Edit2, Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TableBody, TableCell, TableRow } from "@/components/ui/table";
-import type { Category, CategoryProps } from "@/utils/constant";
 
-const CategoryBody = (dummyData: Category) => {
+const CompanyBody = (dummyData: Company) => {
   return (
-    <TableBody>
+     <TableBody>
       {
-        dummyData.dummyData.map((data: CategoryProps) => {
+        dummyData.dummyData.map((data: CompanyProps) => {
           return (
             <TableRow key={data.id}>
               <TableCell className="text-center">{data.id}</TableCell>
@@ -25,7 +26,7 @@ const CategoryBody = (dummyData: Category) => {
         })
       }
     </TableBody>
-  );
-};
+  )
+}
 
-export default CategoryBody;
+export default CompanyBody
