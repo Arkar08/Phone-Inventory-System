@@ -43,7 +43,7 @@ const SideLayout = () => {
                     >
                       <SidebarGroup>
                         <SidebarGroupLabel asChild>
-                          <CollapsibleTrigger className="text-white py-[20px] my-1">
+                          <CollapsibleTrigger className="text-white">
                             <p style={{ fontSize: 14 }}>{item.title}</p>
                             <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
                           </CollapsibleTrigger>
@@ -58,9 +58,9 @@ const SideLayout = () => {
                             >
                               <a
                                 href="/reports"
-                                className="my-1 py-[20px] text-white"
+                                className="my-1 py-[24px] text-white"
                               >
-                                All Reports
+                                Stock Reports
                               </a>
                             </SidebarMenuButton>
                           </SidebarMenuItem>
@@ -75,7 +75,7 @@ const SideLayout = () => {
                             >
                               <a
                                 href="/reports/sell"
-                                className="my-1 py-[20px] text-white"
+                                className="my-1 py-[24px] text-white"
                               >
                                 Sell Reports
                               </a>
@@ -92,7 +92,7 @@ const SideLayout = () => {
                             >
                               <a
                                 href="/reports/purchase"
-                                className="my-1 py-[20px] text-white"
+                                className="my-1 py-[24px] text-white"
                               >
                                 Purchase Reports
                               </a>
@@ -109,7 +109,7 @@ const SideLayout = () => {
                       >
                         <a
                           href={item.route}
-                          className="my-1 py-[20px] text-white"
+                          className="my-1 py-[24px] text-white"
                         >
                           {item.title}
                         </a>
