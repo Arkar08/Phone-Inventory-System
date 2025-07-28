@@ -60,7 +60,7 @@ const SideLayout = () => {
                                 href="/reports"
                                 className="my-1 py-[24px] text-white"
                               >
-                                All Reports
+                                Stock Reports
                               </a>
                             </SidebarMenuButton>
                           </SidebarMenuItem>

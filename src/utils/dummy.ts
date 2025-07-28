@@ -1,3 +1,5 @@
+import type { CategoryProps } from "./constant";
+
 export const menuItems = [
     {
         title:"Dashboard",
@@ -38,3 +40,48 @@ export const menuItems = [
         route:"/logout"
     }
 ]
+
+  export const dummyData:CategoryProps[] = [
+    {
+      id: 1,
+      name: "Phone",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+    {
+      id: 2,
+      name: "Tablet",
+    },
+  ];
+
+  export  const categoryHeaders:string[] = ["Id", "Name", "Action"];

@@ -2,14 +2,13 @@ import { Edit2, Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { TableBody, TableCell, TableRow } from "@/components/ui/table";
+import type { Category, CategoryProps } from "@/utils/constant";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CategoryBody = (dummyData: any) => {
+const CategoryBody = (dummyData: Category) => {
   return (
     <TableBody>
       {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        dummyData.dummyData.map((data: any) => {
+        dummyData.dummyData.map((data: CategoryProps) => {
           return (
             <TableRow key={data.id}>
               <TableCell className="text-center">{data.id}</TableCell>
