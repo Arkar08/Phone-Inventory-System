@@ -159,7 +159,7 @@ import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, saleProps }
     }
   ]
 
-    export const saleHeaders:string[] = ['Id',"Items","Quantity","Sale_Price","Date",'Action'];
+  export const saleHeaders:string[] = ['Id',"Items","Quantity","Sale_Price","Date",'Action'];
 
   export const saleData:saleProps[] = [
     {
