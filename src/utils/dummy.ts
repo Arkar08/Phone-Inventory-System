@@ -1,4 +1,4 @@
-import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, saleProps } from "./constant";
+import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, purchaseReportProps, saleProps, saleReportProps, stockReportProps } from "./constant";
 
   export const menuItems = [
       {
@@ -192,5 +192,70 @@ import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, saleProps }
       quantity: 10,
       price: 850,
       date:"2025-07-28"
+    }
+  ]
+
+  export const stockReport : string[] = ["Item Name","Category","Stock","Sold","Purchased","Current Stock",'Action']
+
+  export const stockData:stockReportProps[] = [
+    {
+      id:1,
+      itemName:"I phone 16",
+      category:"Phone",
+      stock:10,
+      sold:5,
+      purchase:10,
+      currentStock:5
+    },
+    {
+      id:2,
+      itemName:"Samsung Galaxy A54",
+      category:"Phone",
+      stock:10,
+      sold:5,
+      purchase:10,
+      currentStock:5
+    }
+  ]
+
+  export const saleReport :string [] = ["Item Name","Category","Total Sales","Revenue","Profit",'Action']
+
+  export const saleReportData:saleReportProps[] = [
+    {
+      id:1,
+      itemName:"I Phone 15",
+      totalSale:10,
+      revenue:80000,
+      profit:800,
+      category:"Phone"
+    },
+     {
+      id:2,
+      itemName:"I Phone 16",
+      totalSale:10,
+      revenue:80000,
+      profit:800,
+      category:"Phone"
+    }
+  ]
+
+  export const purchaseReport :string [] = ["Item Name","Category","Quantity Purchased","Purchase Price","Total Cost",'Action']
+
+  export const purchaseReportData:purchaseReportProps[] = [
+    {
+      id:1,
+      itemName:"I Phone 15",
+      quantityPurchase:10,
+      purchasePrice:80000,
+      totalCost:80000,
+      category:"Phone"
+    },
+     {
+      id:2,
+      itemName:"I Phone 16",
+       quantityPurchase:10,
+      purchasePrice:80000,
+      totalCost:80000,
+      category:"Phone"
     }
   ]

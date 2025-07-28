@@ -4,11 +4,11 @@ import type { Purchase, PurchaseProps } from "@/utils/constant";
 import { Edit2, Trash, View } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const PurchaseBody = (dummyData: Purchase) => {
+const PurchaseBody = ({dummyData}: Purchase) => {
   return (
     <TableBody>
       {
-        dummyData.dummyData.map((data: PurchaseProps) => {
+        dummyData.map((data: PurchaseProps) => {
           return (
             <TableRow key={data.id}>
               <TableCell className="text-center">{data.id}</TableCell>

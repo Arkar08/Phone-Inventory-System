@@ -4,11 +4,11 @@ import type {  Sale, saleProps } from "@/utils/constant";
 import { Edit2, Trash, View } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const SellBody = (dummyData: Sale) => {
+const SellBody = ({dummyData}: Sale) => {
   return (
     <TableBody>
       {
-        dummyData.dummyData.map((data: saleProps) => {
+        dummyData.map((data: saleProps) => {
           return (
             <TableRow key={data.id}>
               <TableCell className="text-center">{data.id}</TableCell>

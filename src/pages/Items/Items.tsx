@@ -12,14 +12,14 @@ const Items = () => {
     <div>
         <Header title={'Items'} placeholder={'Search Items'} filter={true} report={true}/>
         <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
-        <Table>
-          <TableHeaderField headers={itemHeaders} />
-          <ItemBody dummyData={itemData} />
-        </Table>
-      </div>
-      <div className="h-[60px] rounded-md border-[0.5px] w-[100%] mt-6 flex">
-        <PaginationHeader />
-      </div>
+          <Table>
+            <TableHeaderField headers={itemHeaders} />
+            <ItemBody dummyData={itemData} />
+          </Table>
+        </div>
+        <div className="h-[60px] rounded-md border-[0.5px] w-[100%] mt-6 flex">
+          <PaginationHeader />
+        </div>
     </div>
   )
 }

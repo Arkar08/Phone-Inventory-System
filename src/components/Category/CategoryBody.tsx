@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { TableBody, TableCell, TableRow } from "@/components/ui/table";
 import type { Category, CategoryProps } from "@/utils/constant";
 
-const CategoryBody = (dummyData: Category) => {
+const CategoryBody = ({dummyData}: Category) => {
   return (
     <TableBody>
       {
-        dummyData.dummyData.map((data: CategoryProps) => {
+        dummyData.map((data: CategoryProps) => {
           return (
             <TableRow key={data.id}>
               <TableCell className="text-center">{data.id}</TableCell>

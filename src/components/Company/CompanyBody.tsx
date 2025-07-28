@@ -4,11 +4,11 @@ import type { Company, CompanyProps } from "@/utils/constant";
 import { Edit2, Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CompanyBody = (dummyData: Company) => {
+const CompanyBody = ({dummyData}: Company) => {
   return (
      <TableBody>
       {
-        dummyData.dummyData.map((data: CompanyProps) => {
+        dummyData.map((data: CompanyProps) => {
           return (
             <TableRow key={data.id}>
               <TableCell className="text-center">{data.id}</TableCell>

@@ -79,3 +79,43 @@ export type Sale = {
     dummyData:saleProps[]
 }
 
+export type stockReportProps = {
+    id:number;
+    itemName:string;
+    category:string;
+    stock:number;
+    sold:number;
+    purchase:number;
+    currentStock:number;
+}
+
+export type stock = {
+    dummyData:stockReportProps[]
+}
+
+export type saleReportProps = {
+    id:number;
+    itemName:string;
+    totalSale:number;
+    revenue:number;
+    profit:number;
+    category:string;
+}
+
+export type saleReport = {
+    dummyData:saleReportProps[]
+}
+
+
+export type purchaseReportProps = {
+    id:number;
+    itemName:string;
+    quantityPurchase:number;
+    purchasePrice:number;
+    totalCost:number;
+    category:string;
+}
+
+export type purchaseReport = {
+    dummyData:purchaseReportProps[]
+}
