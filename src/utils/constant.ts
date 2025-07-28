@@ -39,3 +39,43 @@ export type ItemProps = {
 export type Items = {
     dummyData:ItemProps[]
 }
+
+export type PurchaseItems= {
+    name:string;
+    specs:string;
+    color:string;
+}
+
+export type PurchaseProps = {
+    id:number;
+    items:PurchaseItems[]
+    quantity:number;
+    price:number;
+    date:string;
+}
+
+
+export type Purchase = {
+    dummyData:PurchaseProps[]
+}
+
+
+export type saleItems= {
+    name:string;
+    specs:string;
+    color:string;
+}
+
+export type saleProps = {
+    id:number;
+    items:saleItems[]
+    quantity:number;
+    price:number;
+    date:string;
+}
+
+
+export type Sale = {
+    dummyData:saleProps[]
+}
+

@@ -1,45 +1,45 @@
-import type { CategoryProps, CompanyProps, ItemProps } from "./constant";
+import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, saleProps } from "./constant";
 
-export const menuItems = [
-    {
-        title:"Dashboard",
-        route:"/dashboard"
-    },
-    {
-        title:"Company",
-        route:"/company"
-    },
-    {
-        title:"Category",
-        route:'/category'
-    },
-    {
-        title:"Items",
-        route:"/items"
-    },
-    {
-        title:"Purchase Item",
-        route:"/purchase"
-    },
-    {
-        title:"Sell Item",
-        route:"/sell"
-    },
-    {
-        title:"Reports",
-        route:"/reports",
-        children:[
-            {
-                path:'Report1',
-                route:"/report1"
-            }
-        ]
-    },
-    {
-        title:"Logout",
-        route:"/logout"
-    }
-]
+  export const menuItems = [
+      {
+          title:"Dashboard",
+          route:"/dashboard"
+      },
+      {
+          title:"Company",
+          route:"/company"
+      },
+      {
+          title:"Category",
+          route:'/category'
+      },
+      {
+          title:"Items",
+          route:"/items"
+      },
+      {
+          title:"Purchase Item",
+          route:"/purchase"
+      },
+      {
+          title:"Sell Item",
+          route:"/sell"
+      },
+      {
+          title:"Reports",
+          route:"/reports",
+          children:[
+              {
+                  path:'Report1',
+                  route:"/report1"
+              }
+          ]
+      },
+      {
+          title:"Logout",
+          route:"/logout"
+      }
+  ]
 
   export const dummyData:CategoryProps[] = [
     {
@@ -120,5 +120,77 @@ export const menuItems = [
       price:1500000,
       stock:44,
       color:'white'
+    }
+  ]
+
+  export const purchaseHeaders:string[] = ['Id',"Items","Quantity","Purchase_Price","Date",'Action'];
+
+  export const purchaseBody:PurchaseProps[] = [
+    {
+      id: 1,
+      items:[
+        {
+          name:"I phone 16",
+          specs:"Ram 4, 256 Gb",
+          color:"white"
+        },
+        {
+          name:"I phone 15",
+          specs:"Ram 4, 256 Gb",
+          color:"white"
+        }
+      ],
+      quantity: 10,
+      price: 850,
+      date:"2025-07-28"
+    },
+    {
+      id: 2,
+      items:[
+        {
+          name:"I phone 16",
+          specs:"Ram 4, 256 Gb",
+          color:"white"
+        }
+      ],
+      quantity: 10,
+      price: 850,
+      date:"2025-07-28"
+    }
+  ]
+
+    export const saleHeaders:string[] = ['Id',"Items","Quantity","Sale_Price","Date",'Action'];
+
+  export const saleData:saleProps[] = [
+    {
+      id: 1,
+      items:[
+        {
+          name:"I phone 16",
+          specs:"Ram 4, 256 Gb",
+          color:"white"
+        },
+        {
+          name:"I phone 15",
+          specs:"Ram 4, 256 Gb",
+          color:"white"
+        }
+      ],
+      quantity: 10,
+      price: 850,
+      date:"2025-07-28"
+    },
+    {
+      id: 2,
+      items:[
+        {
+          name:"I phone 16",
+          specs:"Ram 4, 256 Gb",
+          color:"white"
+        }
+      ],
+      quantity: 10,
+      price: 850,
+      date:"2025-07-28"
     }
   ]
