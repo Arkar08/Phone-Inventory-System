@@ -10,8 +10,8 @@ const CompanyBody = ({dummyData}: Company) => {
       {
         dummyData.map((data: CompanyProps) => {
           return (
-            <TableRow key={data.id}>
-              <TableCell className="text-center">{data.id}</TableCell>
+            <TableRow key={data._id}>
+              <TableCell className="text-center">{data._id}</TableCell>
               <TableCell className="text-center">{data.name}</TableCell>
               <TableCell className="flex gap-4 justify-center items-center">
                 <Button className="cursor-pointer w-[35px] h-[35px] bg-blue-600 hover:bg-blue-500">

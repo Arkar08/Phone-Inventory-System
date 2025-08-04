@@ -8,7 +8,7 @@ export type HeaderProps = {
 }
 
 export type CategoryProps = {
-    id:number;
+    _id:string;
     name:string;
 }
 
@@ -17,7 +17,7 @@ export type Category = {
 }
 
 export type CompanyProps = {
-    id:number;
+    _id:string;
     name:string;
 }
 

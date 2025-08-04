@@ -43,43 +43,11 @@ import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, purchaseRep
 
   export const dummyData:CategoryProps[] = [
     {
-      id: 1,
+      "_id": "1",
       name: "Phone",
     },
     {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
+      "_id": "2",
       name: "Tablet",
     },
   ];
@@ -90,11 +58,11 @@ import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, purchaseRep
 
   export const companyData:CompanyProps[] = [
     {
-      id:1,
+      _id:"1",
       name:"Huawei"
     },
     {
-      id:2,
+      _id:"2",
       name:"Oppo"
     }
   ]
