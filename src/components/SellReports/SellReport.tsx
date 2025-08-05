@@ -1,11 +1,40 @@
+import { TableBody, TableCell, TableRow } from "@/components/ui/table";
+import type {  saleReport, saleReportProps} from "@/utils/constant";
+import { View } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-
-const SellReport = () => {
+const SellReportBody = ({dummyData}: saleReport) => {
   return (
-    <div>
-      SellReport
-    </div>
+    <TableBody>
+      {
+        dummyData.map((data: saleReportProps) => {
+          return (
+            <TableRow key={data._id}>
+              <TableCell className="flex items-center gap-4">
+                  {
+                    data?.color && (
+                       <div className="w-7 h-7 rounded-full" style={{ backgroundColor: data?.color }}></div>
+                    )
+                  }
+                  <div>
+                    <p className="capitalize">{data.itemName}</p>
+                    <p>{data?.option}</p>
+                  </div>
+              </TableCell>
+              <TableCell className="font-semibold">{data.sold}</TableCell>
+              <TableCell className="font-semibold">{data.revenue} MMK</TableCell>
+              <TableCell className="font-semibold">{data.profit} MMK</TableCell>
+              <TableCell>
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500">
+                  <View color="white" size={12}/>
+                </Button>
+              </TableCell>
+            </TableRow>
+          );
+        })
+      }
+    </TableBody>
   )
 }
 
-export default SellReport
+export default SellReportBody

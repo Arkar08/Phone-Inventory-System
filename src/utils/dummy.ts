@@ -1,4 +1,3 @@
-import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, saleProps } from "./constant";
 
   export const menuItems = [
       {
@@ -41,156 +40,18 @@ import type { CategoryProps, CompanyProps, ItemProps, PurchaseProps, saleProps }
       }
   ]
 
-  export const dummyData:CategoryProps[] = [
-    {
-      id: 1,
-      name: "Phone",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-    {
-      id: 2,
-      name: "Tablet",
-    },
-  ];
+  export  const categoryHeaders:string[] = ["Id", "Name","CreatedAt", "Action"];
 
-  export  const categoryHeaders:string[] = ["Id", "Name", "Action"];
+  export const companyHeaders:string[] = ["Id", 'Name',"CreatedAt", 'Action']
 
-  export const companyHeaders:string[] = ["Id", 'Name', 'Action']
+  export const itemHeaders:string[] = ["Id","Name","Category","Company","Specs","Color","Stock","Price","CreatedAt","Action"]
 
-  export const companyData:CompanyProps[] = [
-    {
-      id:1,
-      name:"Huawei"
-    },
-    {
-      id:2,
-      name:"Oppo"
-    }
-  ]
+  export const purchaseHeaders:string[] = ['Id',"Items","Quantity","Purchase Price","Purchase Date",'Action'];
 
-  export const itemHeaders:string[] = ["Id","Name","Category Name","Company Name","Price","Specs","Color","Stock"]
+  export const saleHeaders:string[] = ['Id',"Items","Quantity","Sale Price","Sale Date",'Action'];
 
-  export const itemData:ItemProps[] = [
-    {
-      id:1,
-      name:"I Phone 16",
-      categoryName:"Phone",
-      companyName:"Apple",
-      price:1500000,
-      specs:"Ram 4, 256 Gb",
-      stock:44,
-      color:"black"
-    },
-    {
-      id:2,
-      name:"I Phone 16",
-      categoryName:"Phone",
-      companyName:"Apple",
-      price:1500000,
-      stock:44,
-      color:'white'
-    }
-  ]
+  export const stockReport : string[] = ["Item Name","Category","Stock","Sold","Purchased","Current Stock",'Action']
 
-  export const purchaseHeaders:string[] = ['Id',"Items","Quantity","Purchase_Price","Date",'Action'];
+  export const saleReport :string [] = ["Item Name","Total Sales","Revenue","Profit",'Action']
 
-  export const purchaseBody:PurchaseProps[] = [
-    {
-      id: 1,
-      items:[
-        {
-          name:"I phone 16",
-          specs:"Ram 4, 256 Gb",
-          color:"white"
-        },
-        {
-          name:"I phone 15",
-          specs:"Ram 4, 256 Gb",
-          color:"white"
-        }
-      ],
-      quantity: 10,
-      price: 850,
-      date:"2025-07-28"
-    },
-    {
-      id: 2,
-      items:[
-        {
-          name:"I phone 16",
-          specs:"Ram 4, 256 Gb",
-          color:"white"
-        }
-      ],
-      quantity: 10,
-      price: 850,
-      date:"2025-07-28"
-    }
-  ]
-
-  export const saleHeaders:string[] = ['Id',"Items","Quantity","Sale_Price","Date",'Action'];
-
-  export const saleData:saleProps[] = [
-    {
-      id: 1,
-      items:[
-        {
-          name:"I phone 16",
-          specs:"Ram 4, 256 Gb",
-          color:"white"
-        },
-        {
-          name:"I phone 15",
-          specs:"Ram 4, 256 Gb",
-          color:"white"
-        }
-      ],
-      quantity: 10,
-      price: 850,
-      date:"2025-07-28"
-    },
-    {
-      id: 2,
-      items:[
-        {
-          name:"I phone 16",
-          specs:"Ram 4, 256 Gb",
-          color:"white"
-        }
-      ],
-      quantity: 10,
-      price: 850,
-      date:"2025-07-28"
-    }
-  ]
+  export const purchaseReport :string [] = ["Item Name","Quantity Purchased","Purchase Price","Total Cost",'Action']

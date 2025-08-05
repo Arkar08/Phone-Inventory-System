@@ -1,15 +1,16 @@
 
 
 export type HeaderProps = {
-    placeholder:string;
+    placeholder?:string;
     title:string;
     filter?:boolean;
     report?:boolean;
 }
 
 export type CategoryProps = {
-    id:number;
+    _id:string;
     name:string;
+    createdAt:string;
 }
 
 export type Category = {
@@ -17,8 +18,9 @@ export type Category = {
 }
 
 export type CompanyProps = {
-    id:number;
+    _id:string;
     name:string;
+    createdAt:string;
 }
 
 export type Company = {
@@ -26,14 +28,15 @@ export type Company = {
 }
 
 export type ItemProps = {
-    id:number;
-    name:string;
-    categoryName:string;
-    companyName:string;
+    _id:string;
+    itemName:string;
+    category:string;
+    company:string;
     price:number;
-    specs?:string;
+    option?:string;
     stock:number;
     color:string
+    createdAt:string;
 }
 
 export type Items = {
@@ -47,11 +50,11 @@ export type PurchaseItems= {
 }
 
 export type PurchaseProps = {
-    id:number;
-    items:PurchaseItems[]
+    _id:string;
+    item:string;
     quantity:number;
-    price:number;
-    date:string;
+    purchasePrice:number;
+    purchaseDate:string;
 }
 
 
@@ -67,11 +70,11 @@ export type saleItems= {
 }
 
 export type saleProps = {
-    id:number;
-    items:saleItems[]
+    _id:string;
+    item:string;
     quantity:number;
-    price:number;
-    date:string;
+    sellPrice:number;
+    sellDate:string;
 }
 
 
@@ -79,3 +82,47 @@ export type Sale = {
     dummyData:saleProps[]
 }
 
+export type stockReportProps = {
+    _id:string;
+    itemName:string;
+    color?:string;
+    option?:string;
+    category:string;
+    stock:number;
+    sold:number;
+    purchased:number;
+    currentStock:number;
+}
+
+export type stock = {
+    dummyData:stockReportProps[]
+}
+
+export type saleReportProps = {
+    _id:string;
+    color?:string;
+    option?:string;
+    itemName:string;
+    sold:number;
+    revenue:number;
+    profit:number;
+}
+
+export type saleReport = {
+    dummyData:saleReportProps[]
+}
+
+
+export type purchaseReportProps = {
+    _id:string;
+    color?:string;
+    option?:string;
+    itemName:string;
+    purchaseQuantity:number;
+    purchasePrice:number;
+    totalCost:number;
+}
+
+export type purchaseReport = {
+    dummyData:purchaseReportProps[]
+}

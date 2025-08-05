@@ -7,7 +7,7 @@ const TableHeaderField = ({ headers }: any) => {
       <TableRow>
         {headers.map((header: string) => {
           return (
-            <TableHead key={header} className="text-center">
+            <TableHead key={header}>
               {header}
             </TableHead>
           );
