@@ -3,6 +3,7 @@ import { TableBody, TableCell, TableRow } from "@/components/ui/table";
 import type {  Sale, saleProps } from "@/utils/constant";
 import { Edit2, Trash, View } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import moment from "moment";
 
 const SellBody = ({dummyData}: Sale) => {
   return (
@@ -10,21 +11,21 @@ const SellBody = ({dummyData}: Sale) => {
       {
         dummyData.map((data: saleProps) => {
           return (
-            <TableRow key={data.id}>
-              <TableCell className="text-center">{data.id}</TableCell>
-              <TableCell className="text-center">{data.items.length}</TableCell>
-              <TableCell className="text-center">{data.quantity}</TableCell>
-              <TableCell className="text-center">${data.price}</TableCell>
-              <TableCell className="text-center">{data.date}</TableCell>
-              <TableCell className="flex gap-4 justify-center items-center">
-                <Button className="cursor-pointer w-[35px] h-[35px] bg-blue-600 hover:bg-blue-500">
-                  <Edit2 color="white" />
+            <TableRow key={data._id}>
+              <TableCell>{data._id}</TableCell>
+              <TableCell>{data.item}</TableCell>
+              <TableCell className="text-center font-semibold">{data.quantity}</TableCell>
+              <TableCell className="text-right font-semibold">{data.sellPrice} MMK</TableCell>
+              <TableCell className={`${data.sellDate ? "":"text-center"}`}>{data?.sellDate ? moment(data?.sellDate).format('LL'):"_"}</TableCell>
+              <TableCell className="flex gap-4">
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500">
+                  <Edit2 color="white" size={12}/>
                 </Button>
-                <Button className="cursor-pointer w-[35px] h-[35px] bg-[#59008c] hover:bg-[#af4aea]">
-                  <View color="white" />
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-[#59008c] hover:bg-[#af4aea]">
+                  <View color="white" size={12}/>
                 </Button>
-                <Button className="cursor-pointer w-[35px] h-[35px] bg-red-600 hover:bg-red-500">
-                  <Trash color="white" />
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-red-600 hover:bg-red-500">
+                  <Trash color="white" size={12}/>
                 </Button>
               </TableCell>
             </TableRow>

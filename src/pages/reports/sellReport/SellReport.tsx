@@ -1,24 +1,44 @@
 import SellReportBody from "@/components/SellReports/SellReport"
 import Header from "@/components/shared/Header/Header"
-import { PaginationHeader } from "@/components/shared/Pagination/PaginationHeader"
+import Loading from "@/components/shared/Loading/Loading"
 import TableHeaderField from "@/components/shared/TableHeader/TableHeaderField"
 import { Table } from "@/components/ui/table"
-import { saleReport, saleReportData } from "@/utils/dummy"
+import { useSaleReport } from "@/hooks/useSaleReport"
+import {saleReport } from "@/utils/dummy"
+import { useEffect, useState } from "react"
 
 
 
 const SellReport = () => {
+
+  const {querySaleReport} = useSaleReport()
+
+  const {data:saleReports,isLoading,isError,error,isSuccess} = querySaleReport;
+  const [saleReportList,setSaleReportList] = useState([])
+
+  useEffect(()=>{
+    if(isSuccess && saleReports){
+        setSaleReportList(saleReports)
+    }
+  },[isSuccess,saleReports])
+
+
+  if(isError){
+    console.log(error.message)
+  }
+
+  if(isLoading){
+    return <Loading />
+  }
+
   return (
     <div>
       <Header title="Sell Reports" placeholder="Search Items" filter={true} report={true}/>
-      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
+      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-180px)] overflow-auto w-[100%]">
           <Table>
             <TableHeaderField headers={saleReport} />
-            <SellReportBody dummyData={saleReportData} />
+            <SellReportBody dummyData={saleReportList} />
           </Table>
-        </div>
-        <div className="h-[60px] rounded-md border-[0.5px] w-[100%] mt-6 flex">
-          <PaginationHeader />
         </div>
     </div>
   )

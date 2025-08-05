@@ -9,16 +9,26 @@ const StockReport = ({dummyData}: stock) => {
       {
         dummyData.map((data: stockReportProps) => {
           return (
-            <TableRow key={data.id}>
-              <TableCell className="text-center">{data.itemName}</TableCell>
-              <TableCell className="text-center">{data.category}</TableCell>
-              <TableCell className="text-center">{data.stock}</TableCell>
-              <TableCell className="text-center">{data.sold}</TableCell>
-              <TableCell className="text-center">{data.purchase}</TableCell>
-              <TableCell className="text-center">{data.currentStock}</TableCell>
-              <TableCell className="flex gap-4 justify-center items-center">
-                <Button className="cursor-pointer w-[35px] h-[35px] bg-blue-600 hover:bg-blue-500">
-                  <View color="white" />
+            <TableRow key={data._id}>
+              <TableCell className="flex items-center gap-4">
+                  {
+                    data?.color && (
+                       <div className="w-7 h-7 rounded-full" style={{ backgroundColor: data?.color }}></div>
+                    )
+                  }
+                  <div>
+                    <p className="capitalize">{data.itemName}</p>
+                    <p>{data?.option}</p>
+                  </div>
+              </TableCell>
+              <TableCell>{data.category}</TableCell>
+              <TableCell className="font-semibold">{data.stock}</TableCell>
+              <TableCell className="font-semibold">{data.sold}</TableCell>
+              <TableCell className="font-semibold">{data.purchased}</TableCell>
+              <TableCell className="font-semibold">{data.currentStock}</TableCell>
+              <TableCell>
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500">
+                  <View color="white" size={12}/>
                 </Button>
               </TableCell>
             </TableRow>

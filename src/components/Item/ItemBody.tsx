@@ -1,6 +1,9 @@
 
 import { TableBody, TableCell, TableRow } from "@/components/ui/table";
 import type { ItemProps, Items } from "@/utils/constant";
+import { Edit2, Trash } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import moment from "moment";
 
 const ItemBody = ({dummyData}:Items) => {
   return (
@@ -8,18 +11,26 @@ const ItemBody = ({dummyData}:Items) => {
       {
         dummyData.map((data: ItemProps) => {
           return (
-            <TableRow key={data.id} className="h-[60px]">
-                <TableCell className="text-center">{data.id}</TableCell>
-                <TableCell className="text-center">{data.name}</TableCell>
-                <TableCell className="text-center">{data.categoryName}</TableCell>
-                <TableCell className="text-center">{data.companyName}</TableCell>
-                <TableCell className="text-center font-semibold">${data.price}</TableCell>
-                <TableCell className="text-center">{data.specs ? data.specs : "-"}</TableCell>
-                <TableCell className="text-center flex justify-center items-center gap-2 mt-2">
-                    <div className="w-[20px] h-[20px] border-[0.5px] rounded-full" style={{backgroundColor:data.color}}></div>
-                    <p className="capitalize">{data.color}</p>
+            <TableRow key={data._id} className="h-[60px]">
+                <TableCell>{data._id}</TableCell>
+                <TableCell>{data.itemName}</TableCell>
+                <TableCell>{data.category}</TableCell>
+                <TableCell>{data.company}</TableCell>
+                <TableCell>{data.option ? data.option : "-"}</TableCell>
+                <TableCell>
+                    <div className="w-7 h-7 rounded-full" style={{backgroundColor:data.color}}></div>
                 </TableCell>
-                <TableCell className="text-center font-semibold">{data.stock}</TableCell>
+                <TableCell className="font-semibold text-center">{data.stock}</TableCell>
+                <TableCell className="font-semibold text-right">{data.price} MMK</TableCell>
+                <TableCell>{moment(data.createdAt).format('LLL')}</TableCell>
+                <TableCell className="flex gap-4">
+                  <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500">
+                    <Edit2 color="white" size={12}/>
+                  </Button>
+                  <Button className="cursor-pointer w-[28px] h-[28px] bg-red-600 hover:bg-red-500">
+                    <Trash color="white" size={12}/>
+                  </Button>
+              </TableCell>
             </TableRow>
           );
         })
