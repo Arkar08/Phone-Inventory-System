@@ -7,14 +7,15 @@ import { Table } from "@/components/ui/table"
 import { useSell } from "@/hooks/useSell"
 import { saleHeaders } from "@/utils/dummy"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 const Sell = () => {
 
   const {querySell} = useSell()
-
   const {data:sellItem,isLoading,isError,error,isSuccess} = querySell;
   const [sellItemList,setSellItemList] = useState([])
+  const navigate = useNavigate();
 
   useEffect(()=>{
     if(isSuccess && sellItem){
@@ -30,9 +31,13 @@ const Sell = () => {
     console.log(error)
   }
 
+  const createsell =  () => {
+    navigate('create')
+  }
+
   return (
     <div>
-      <Header title="Sell Item" placeholder="Search Items" filter={true}/>
+      <Header title="Sell Item" placeholder="Search Items" filter={true} plusClick={createsell}/>
       <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
         <Table>
           <TableHeaderField headers={saleHeaders} />

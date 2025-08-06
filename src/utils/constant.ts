@@ -5,6 +5,7 @@ export type HeaderProps = {
     title:string;
     filter?:boolean;
     report?:boolean;
+    plusClick?:() =>void;
 }
 
 export type CategoryProps = {

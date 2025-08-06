@@ -1,7 +1,5 @@
 import { TableBody, TableCell, TableRow } from "@/components/ui/table";
 import type {  stock, stockReportProps } from "@/utils/constant";
-import { View } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const StockReport = ({dummyData}: stock) => {
   return (
@@ -26,11 +24,6 @@ const StockReport = ({dummyData}: stock) => {
               <TableCell className="font-semibold">{data.sold}</TableCell>
               <TableCell className="font-semibold">{data.purchased}</TableCell>
               <TableCell className="font-semibold">{data.currentStock}</TableCell>
-              <TableCell>
-                <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500">
-                  <View color="white" size={12}/>
-                </Button>
-              </TableCell>
             </TableRow>
           );
         })

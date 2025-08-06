@@ -7,14 +7,15 @@ import { Table } from "@/components/ui/table"
 import { usePurchase } from "@/hooks/usePurchase"
 import {purchaseHeaders } from "@/utils/dummy"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 const Purchase = () => {
 
     const {queryPurchase} = usePurchase()
-
     const {data:purchase,isLoading,isError,isSuccess,error} = queryPurchase;
     const [purchaseItem,setPurchaseItem] = useState([])
+    const navigate = useNavigate();
 
     useEffect(()=>{
       if(isSuccess && purchase){
@@ -30,9 +31,13 @@ const Purchase = () => {
       return <Loading />
     }
 
+    const CreatePurchase = () => {
+      navigate('create')
+    }
+
   return (
     <div>
-      <Header title="Purchase Item" placeholder="Search Items" filter={true}/>
+      <Header title="Purchase Item" placeholder="Search Items" filter={true} plusClick={CreatePurchase}/>
       <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
         <Table>
           <TableHeaderField headers={purchaseHeaders} />

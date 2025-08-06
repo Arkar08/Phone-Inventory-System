@@ -7,14 +7,15 @@ import { Table } from "@/components/ui/table"
 import { useItem } from "@/hooks/useItem"
 import { itemHeaders } from "@/utils/dummy"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 const Items = () => {
   
   const {queryItem} = useItem()
-
   const {data:items,isSuccess,isError,isLoading,error} = queryItem;
   const [itemList,setItemList] = useState([])
+  const navigate = useNavigate()
 
   useEffect(()=>{
     if(isSuccess && items){
@@ -30,9 +31,13 @@ const Items = () => {
     return <Loading />
   }
 
+  const createItems = () => {
+    navigate('create')
+  }
+
   return (
     <div>
-        <Header title={'Items'} placeholder={'Search Items'} filter={true} />
+        <Header title={'Items'} placeholder={'Search Items'} filter={true} plusClick={createItems}/>
         <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
           <Table>
             <TableHeaderField headers={itemHeaders} />

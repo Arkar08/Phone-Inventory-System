@@ -4,7 +4,7 @@ import type { HeaderProps } from "@/utils/constant"
 import { Filter, Plus } from "lucide-react"
 
 
-const Header = ({title,placeholder,filter,report}:HeaderProps) => {
+const Header = ({title,placeholder,filter,report,plusClick}:HeaderProps) => {
   return (
     <div className="border-b-[0.5px] h-[60px] flex items-center justify-between">
         <h3 className="text-2xl font-semibold text-[var(--sidebar)]">{title}</h3>
@@ -16,7 +16,7 @@ const Header = ({title,placeholder,filter,report}:HeaderProps) => {
         <div className="flex gap-5">
             {
                 !report && (
-                    <Button className="cursor-pointer bg-[var(--sidebar)] hover:bg-[var(--sidebar-accent)]">
+                    <Button className="cursor-pointer bg-[var(--sidebar)] hover:bg-[var(--sidebar-accent)]" onClick={plusClick}>
                         <Plus />
                     </Button>
                 )
