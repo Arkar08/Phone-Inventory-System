@@ -34,7 +34,7 @@ const Category = () => {
   return (
     <div>
       <Header title={"Category"} placeholder={"Search Category"} />
-      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
+      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-280px)] overflow-auto w-[100%]">
         <Table>
           <TableHeaderField headers={categoryHeaders} />
           <CategoryBody dummyData={categoryList} />

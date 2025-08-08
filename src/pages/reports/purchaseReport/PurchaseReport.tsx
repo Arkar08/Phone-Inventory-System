@@ -32,7 +32,7 @@ const PurchaseReport = () => {
   return (
     <div>
       <Header title="Purchase Reports" filter={true} report={true}/>
-      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-180px)] overflow-auto w-[100%]">
+      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-200px)] overflow-auto w-[100%]">
           <Table>
             <TableHeaderField headers={purchaseReport} />
             <PurchaseReportBody dummyData={purchaseReportList} />

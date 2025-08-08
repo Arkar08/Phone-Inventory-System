@@ -50,7 +50,7 @@
 
   export const saleHeaders:string[] = ['Id',"Items","Quantity","Sale Price","Sale Date",'Action'];
 
-  export const stockReport : string[] = ["Item Name","Category","Stock","Sold","Purchased","Current Stock",'Action']
+  export const stockReport : string[] = ["Item Name","Category","Stock","Sold","Purchased","Current Stock"]
 
   export const saleReport :string [] = ["Item Name","Total Sales","Revenue","Profit",'Action']
 

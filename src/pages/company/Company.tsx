@@ -34,7 +34,7 @@ const Company = () => {
   return (
     <div>
       <Header title={'Company Listings'} placeholder={'Search Company Listings'}/>
-      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
+      <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-280px)] overflow-auto w-[100%]">
         <Table>
           <TableHeaderField headers={companyHeaders} />
           <CompanyBody dummyData={companyList} />

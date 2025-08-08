@@ -4,8 +4,20 @@ import type { Purchase, PurchaseProps } from "@/utils/constant";
 import { Edit2, Trash, View } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 const PurchaseBody = ({dummyData}: Purchase) => {
+
+  const navigate = useNavigate();
+
+  const updatePurchase = (id:string) => {
+    navigate(`${id}`)
+  }
+
+  const viewPurchase = (id:string) => {
+    navigate(`view/${id}`)
+  }
+
   return (
     <TableBody>
       {
@@ -18,10 +30,10 @@ const PurchaseBody = ({dummyData}: Purchase) => {
               <TableCell className="text-right font-semibold">{data.purchasePrice} MMK</TableCell>
               <TableCell className={`${data.purchaseDate ? "":"text-center"}`}>{data?.purchaseDate ? moment(data?.purchaseDate).format('LL'):"_"}</TableCell>
               <TableCell className="flex gap-4">
-                <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500">
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-blue-600 hover:bg-blue-500" onClick={()=>updatePurchase(data._id)}>
                   <Edit2 color="white" size={12}/>
                 </Button>
-                <Button className="cursor-pointer w-[28px] h-[28px] bg-[#59008c] hover:bg-[#af4aea]">
+                <Button className="cursor-pointer w-[28px] h-[28px] bg-[#59008c] hover:bg-[#af4aea]" onClick={()=>viewPurchase(data._id)}>
                   <View color="white" size={12}/>
                 </Button>
                 <Button className="cursor-pointer w-[28px] h-[28px] bg-red-600 hover:bg-red-500">

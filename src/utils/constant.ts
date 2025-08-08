@@ -5,6 +5,7 @@ export type HeaderProps = {
     title:string;
     filter?:boolean;
     report?:boolean;
+    plusClick?:() =>void;
 }
 
 export type CategoryProps = {
@@ -125,4 +126,41 @@ export type purchaseReportProps = {
 
 export type purchaseReport = {
     dummyData:purchaseReportProps[]
+}
+
+
+export type CreateHeaderProps = {
+    title:string;
+}
+
+export type InputProps = {
+    title:string;
+    placeholder:string;
+    option?:boolean;
+    type?:string;
+    name:string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    control:any;
+}
+
+export type ButtonProps = {
+    color:string;
+    text:string;
+    click?:() =>void;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    type?:any;
+}
+
+export type optionProps = {
+    name:string;
+    _id:string;
+}
+
+export type SelectProps = {
+    title:string;
+    placeholder:string;
+    optionData:optionProps[]
+    isLoading?:boolean;
+    option?:boolean;
+    handleChange?:(value:string) => void;
 }
