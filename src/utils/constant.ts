@@ -127,3 +127,34 @@ export type purchaseReportProps = {
 export type purchaseReport = {
     dummyData:purchaseReportProps[]
 }
+
+
+export type CreateHeaderProps = {
+    title:string;
+}
+
+export type InputProps = {
+    title:string;
+    placeholder:string;
+    option?:boolean;
+    type?:string;
+}
+
+export type ButtonProps = {
+    color:string;
+    text:string;
+    click?:() =>void;
+}
+
+export type optionProps = {
+    name:string;
+    _id:string;
+}
+
+export type SelectProps = {
+    title:string;
+    placeholder:string;
+    optionData:optionProps[]
+    isLoading?:boolean;
+    option?:boolean
+}
