@@ -138,12 +138,17 @@ export type InputProps = {
     placeholder:string;
     option?:boolean;
     type?:string;
+    name:string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    control:any;
 }
 
 export type ButtonProps = {
     color:string;
     text:string;
     click?:() =>void;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    type?:any;
 }
 
 export type optionProps = {
@@ -156,5 +161,6 @@ export type SelectProps = {
     placeholder:string;
     optionData:optionProps[]
     isLoading?:boolean;
-    option?:boolean
+    option?:boolean;
+    handleChange?:(value:string) => void;
 }

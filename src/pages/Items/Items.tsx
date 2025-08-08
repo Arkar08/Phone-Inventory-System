@@ -38,7 +38,7 @@ const Items = () => {
   return (
     <div>
         <Header title={'Items'} placeholder={'Search Items'} filter={true} plusClick={createItems}/>
-        <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-250px)] overflow-auto w-[100%]">
+        <div className="mt-6 border-[0.5px] p-3 rounded-md h-[calc(100vh-280px)] overflow-auto w-[100%]">
           <Table>
             <TableHeaderField headers={itemHeaders} />
             <ItemBody dummyData={itemList} />
